@@ -1,5 +1,6 @@
 package Trees;
 
+import com.sun.source.tree.Tree;
 import org.w3c.dom.Node;
 
 class BinaryTree{
@@ -13,6 +14,8 @@ class BinaryTree{
             right = null;
         }
     }
+
+    Node prev = null;
     Node root;
     BinaryTree(){
         root = null;
@@ -44,6 +47,28 @@ class BinaryTree{
         System.out.println(root.val);
         inorderTraversal(root.right);
     }
+
+    public void FlattenTree(Node root){
+
+        if(root == null){
+            return;
+        }
+        FlattenTree(root.right);
+        FlattenTree(root.left);
+
+        root.right = prev;
+        root.left = null;
+        prev = root;
+
+    }
+
+    public  void  printFlattenTree(Node root){
+        while(root!=null){
+            System.out.print(root.val + " ");
+            root = root.right;
+        }
+    }
+
 }
 
 public class FlattenBinaryTreeUsingRecurssion
@@ -59,5 +84,8 @@ public class FlattenBinaryTreeUsingRecurssion
         tree.insert(75);
 
         tree.inorderTraversal(tree.root);
+        tree.FlattenTree(tree.root);
+
+        tree.printFlattenTree(tree.root);
     }
 }
