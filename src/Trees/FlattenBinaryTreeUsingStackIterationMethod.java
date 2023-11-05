@@ -1,5 +1,6 @@
 package Trees;
-public class FlattenBinaryTreeUsingRecurssion
+
+public class FlattenBinaryTreeUsingStackIterationMethod
 {
     public static void main(String[] args) {
         BinaryTree tree = new BinaryTree();
@@ -10,10 +11,8 @@ public class FlattenBinaryTreeUsingRecurssion
         tree.insert(35);
         tree.insert(55);
         tree.insert(75);
-
-        tree.inorderTraversal(tree.root);
-        tree.FlattenTree(tree.root);
-
+        System.out.println("Print Flatten tree using stack : ");
+        tree.FlattenUsingStack(tree.root);
         tree.printFlattenTree(tree.root);
     }
 }
