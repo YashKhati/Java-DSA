@@ -1,4 +1,8 @@
-package MultiThreading;
+package MultiThreading.ExtendecThreadClass;
+
+import MultiThreading.ExtendecThreadClass.A;
+import MultiThreading.ExtendecThreadClass.B;
+import MultiThreading.ExtendecThreadClass.C;
 
 /*
 -------------------------------------------------
