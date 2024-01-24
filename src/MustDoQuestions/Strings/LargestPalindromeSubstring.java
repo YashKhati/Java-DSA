@@ -30,8 +30,6 @@ public class LargestPalindromeSubstring
                 low--;
                 high++;
             }
-
-
             // for odd number of char
             low = i-1;
             high = i+1;
